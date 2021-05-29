@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+*,*::before, *::after{
+    font-weight: normal;
+    box-sizing: border-box;
+    font-family: 'Odibee sans', cursive;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background:linear-gradient(to right,#3edbf0,#77acf1)
+}
+.calculator-wrap{
+    display:grid;
+    justify-content:center;
+    height: 100vh;
+    align-content: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+.calculator-wrap > button{
+    background-color: #c0fefc;
+    border: 1px solid white;
+    border-radius: 1px;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    transition: all;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+.calculator-wrap > button:hover{
+    background-color: rgba(255,255,255,0.9);
+    
+}
+.span-two{
+    grid-column: span 2;
+}
+.calc-display{
+    grid-column: span 4;
+    background-color: rgba(24,24,24,0.8);
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.calc-display .prev-operand{
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.7);
+}
+.calc-display .curr-operand{
+    font-size: 2rem;
+    color: white;
+}
